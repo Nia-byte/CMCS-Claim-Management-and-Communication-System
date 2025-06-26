@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="login-container">
+    <div class="background-image">
+        <img src="css/images/111.jpg" alt="Background Image">
+    </div>
+
+
+    <h3>LOGIN</h3>
+
+    <div class="login-content">
+        <div class="logo">
+            <img src="css/images/EMPLOYEEPICTURES.jpg" alt="Company Logo" />
+        </div>
+        <form method="post">
+
+            <br></br>
+            <br></br>
+            <h2>Select your role:</h2>
+            <label>
+                <input type="checkbox" name="Role" value="Lecturer" /> Lecturer
+            </label>
+            <br />
+            <label>
+                <input type="checkbox" name="Role" value="Coordinator" /> Coordinator
+            </label>
+            <br />
+            <label>
+                <input type="checkbox" name="Role" value="Manager" /> Manager
+            </label>
+            <br />
+            <label>
+                <input type="checkbox" name="Role" value="HRManagement" /> HR Management
+            </label>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" asp-for="Username" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" asp-for="Password" class="form-control" required />
+            </div>
+
+            <br /><br />
+            <button type="submit">Login</button>
+
+
+        </form>
+
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+</div>

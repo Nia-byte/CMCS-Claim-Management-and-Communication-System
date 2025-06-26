@@ -1,0 +1,11 @@
+﻿**Monthly Payment Report**
+**Generated Date:** 22 November 2024
+**Report Period:** 01 November 2024 - 30 November 2024
+
+
+**Lecture Name:** John Doe, **Hours Worked:** 10,00, **Hourly Rate (R):** 25,00, **Month:** October, **Module:** PROG, **Total:** R250,00
+
+**Summary**
+**Total Claims Processed:** 1
+**Total Hours Worked:** 10,00
+**Total Amount:** R250,00

@@ -1,0 +1,39 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.ClaimApprovalModel
+@{
+    ViewData["Title"] = "Claim Approval";
+}
+
+<div class="container">
+    <h2>Claim Details</h2>
+    <form method="post">
+        <input type="hidden" asp-for="Claim.ClaimId" />
+
+        <div class="form-group">
+            <label>Module</label>
+            <input asp-for="Claim.Module" class="form-control" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Hours Worked</label>
+            <input asp-for="Claim.HoursWorked" class="form-control" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Rejection Reason</label>
+            <select asp-for="RejectionReason" class="form-control">
+                <option value="">Select Reason</option>
+                <option value="Late Submission">Late Submission</option>
+                <option value="Invalid Hours">Invalid Hours</option>
+                <option value="Incorrect Documents">Incorrect Documents</option>
+                <option value="Invalid Module">Invalid Module</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" asp-page-handler="Approve" class="btn btn-success">Approve</button>
+            <button type="submit" asp-page-handler="Reject" class="btn btn-danger">Reject</button>
+        </div>
+    </form>
+</div>

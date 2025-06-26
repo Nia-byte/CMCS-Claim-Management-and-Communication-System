@@ -1,0 +1,438 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.PendingClaimsModel
+@{
+    ViewData["Title"] = "Pending Claims";
+}
+
+
+
+@Html.AntiForgeryToken()
+<div class="container mt-4"> <!--(LearnRazorPages,[s.a])-->
+    <!-- Top Section -->
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="css/images/EMPLOYEEPICTURES.jpg" alt="Logo" style="height: 96px; width: 96px;" />
+        </div>
+        <div class="col">
+            <h1 class="fw-bold">CMCS</h1>
+            <p>Welcome Back</p>
+        </div>
+        <div class="col-auto">
+            <a class="btn btn-primary me-2" href="/Notifications">Notifications</a>
+            <a class="btn btn-danger" href="/Logout">Logout</a>
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- Pending Claims Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center mb-4">Pending Claims</h3>
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Module</th>
+                            <th>Rate</th>
+                            <th>Hours</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Policy Check</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var claim in Model.PendingClaims)
+                        {
+                            <tr>
+                                <td>@claim.Module</td>
+                                <td>@claim.HourlyRate</td>
+                                <td>@claim.HoursWorked</td>
+                                <td>@claim.Total</td>
+                                <td>@claim.Status</td>
+                                <td>@claim.SubmissionDate.ToShortDateString()</td>
+                                <td>
+                                    <button type="button" class="btn btn-info btn-sm"
+                                            onclick="showPolicyCheck(@claim.ClaimId, @claim.HoursWorked, @claim.HourlyRate, @claim.Total, '@claim.Module', '@claim.Month')"
+                                            data-bs-toggle="modal" data-bs-target="#policyCheckModal">
+                                        View Policy Check
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-success btn-sm me-2" onclick="showApproveModal(@claim.ClaimId)">Approve</button>
+                                    <button class="btn btn-danger btn-sm me-2" onclick="showRejectModal(@claim.ClaimId)">Reject</button>
+                                    <button class="btn btn-info btn-sm view-details" onclick="toggleClaimDetails(@claim.ClaimId)">
+                                        View Details
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="details-@claim.ClaimId" class="claim-details" style="display: none;">
+                                <td colspan="8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <strong>Module:</strong>
+                                                        <span>@claim.Module</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Hours Worked:</strong>
+                                                        <span>@claim.HoursWorked</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Rate:</strong>
+                                                        <span>@claim.HourlyRate.ToString("C")</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Total:</strong>
+                                                        <span>@claim.Total.ToString("C")</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <strong>Month:</strong>
+                                                        <span>@claim.Month</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Submission Date:</strong>
+                                                        <span>@claim.SubmissionDate.ToString("d")</span>
+                                                    </div>
+                                                    @if (claim.Notes != null)
+                                                    {
+                                                        <div class="mb-3">
+                                                            <strong>Notes:</strong>
+                                                            <span>@claim.Notes</span>
+                                                        </div>
+                                                    }
+                                                    @if (claim.Document != null)
+                                                    {
+                                                        <div class="mb-3">
+                                                            <strong>Document:</strong>
+                                                            <a href="#" class="btn btn-primary btn-sm" onclick="downloadDocument(@claim.ClaimId)">
+                                                                Download Document
+                                                            </a>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<!--(LearnRazorPages,[s.a])-->
+        <!-- Policy Check Modal -->
+        <div class="modal fade" id="policyCheckModal" tabindex="-1" aria-labelledby="policyCheckModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="policyCheckModalLabel">Policy Compliance Check</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="policy-checks">
+                            <div class="policy-item mb-3">
+                                <div class="d-flex align-items-center">
+                                    <span id="hoursCheck" class="policy-icon me-2">⏳</span>
+                                    <span>Weekly Hours (Max 48 hours)</span>
+                                    <span id="hoursResult" class="ms-auto"></span>
+                                </div>
+                            </div>
+                            <div class="policy-item mb-3">
+                                <div class="d-flex align-items-center">
+                                    <span id="amountCheck" class="policy-icon me-2">💰</span>
+                                    <span>Claim Amount (Max R50,000)</span>
+                                    <span id="amountResult" class="ms-auto"></span>
+                                </div>
+                            </div>
+                            <div class="policy-item mb-3">
+                                <div class="d-flex align-items-center">
+                                    <span id="rateCheck" class="policy-icon me-2">⚖️</span>
+                                    <span>Hourly Rate (R50 - R300)</span>
+                                    <span id="rateResult" class="ms-auto"></span>
+                                </div>
+                            </div>
+                            <div class="policy-item mb-3">
+                                <div class="d-flex align-items-center">
+                                    <span id="moduleCheck" class="policy-icon me-2">📚</span>
+                                    <span>One Claim Per Module Per Month</span>
+                                    <span id="moduleResult" class="ms-auto"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["Error"]
+            </div>
+        } <!--(Dev.to, 2023)-->
+        <!-- Back Button -->
+        <div class="mt-4">
+            <button class="btn btn-primary-custom" onclick="window.location='/PCoordinator';">Back</button>
+        </div>
+    </div>
+
+ 
+
+    <!-- Reject Modal --> <!--(LearnRazorPages,[s.a])-->
+    <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rejectModalLabel">Reject Claim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="rejectReason" class="form-label">Select Rejection Reason:</label>
+                        <select class="form-select" id="rejectReason">
+                            <option value="">Choose a reason...</option>
+                            <option value="Late claim submission">Late claim submission</option>
+                            <option value="Invalid hours">Invalid hours</option>
+                            <option value="Incorrect supporting documents">Incorrect supporting documents</option>
+                            <option value="Invalid module">Invalid module</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="otherReasonDiv" style="display: none;">
+                        <label for="otherReason" class="form-label">Specify Other Reason:</label>
+                        <textarea class="form-control" id="otherReason" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmReject">Confirm Rejection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Approve Modal --> <!--(LearnRazorPages,[s.a])-->
+    <div class="modal fade" id="approveModal" tabindex="-1" aria-labelledby="approveModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="approveModalLabel">Approve Claim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="approveReason" class="form-label">Additional Comments (Optional):</label>
+                        <textarea class="form-control" id="approveReason" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" id="confirmApprove">Confirm Approval</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function toggleClaimDetails(claimId) {
+        const detailsRow = document.getElementById(`details-${claimId}`);
+        const allDetailsRows = document.getElementsByClassName('claim-details');
+
+        // Hide all other detail rows
+        Array.from(allDetailsRows).forEach(row => {
+            if (row.id !== `details-${claimId}`) {
+                row.style.display = 'none';
+            }
+        });
+
+        // Toggle the clicked detail row
+        if (detailsRow) {
+            detailsRow.style.display = detailsRow.style.display === 'none' ? 'table-row' : 'none';
+        }
+    }
+
+    // Add the downloadDocument function
+    function downloadDocument(claimId) {
+        window.location.href = `/PendingClaims?handler=DownloadDocument&claimId=${claimId}`;
+    }
+
+    function showPolicyCheck(claimId, hours, rate, total, module, month) {
+        // Check weekly hours
+        const hoursPass = hours <= 48;
+        document.getElementById('hoursCheck').innerHTML = hoursPass ? '✅' : '❌';
+        document.getElementById('hoursResult').innerHTML = `${hours} hours`;
+        document.getElementById('hoursResult').className = hoursPass ? 'result-pass' : 'result-fail';
+
+        // Check claim amount
+        const amountPass = total <= 50000;
+        document.getElementById('amountCheck').innerHTML = amountPass ? '✅' : '❌';
+        document.getElementById('amountResult').innerHTML = `R${total}`;
+        document.getElementById('amountResult').className = amountPass ? 'result-pass' : 'result-fail';
+
+        // Check hourly rate
+        const ratePass = rate >= 50 && rate <= 300;
+        document.getElementById('rateCheck').innerHTML = ratePass ? '✅' : '❌';
+        document.getElementById('rateResult').innerHTML = `R${rate}/hr`;
+        document.getElementById('rateResult').className = ratePass ? 'result-pass' : 'result-fail';
+
+        // Check module/month claim (this would need backend verification)
+        checkModuleClaim(claimId, module, month);
+    }
+
+    async function checkModuleClaim(claimId, module, month) {
+        try {
+            const response = await fetch(`?handler=CheckModuleClaim&claimId=${claimId}&module=${module}&month=${month}`);
+            const data = await response.json();
+            const modulePass = data.isValid;
+
+            document.getElementById('moduleCheck').innerHTML = modulePass ? '✅' : '❌';
+            document.getElementById('moduleResult').innerHTML = modulePass ? 'Valid' : 'Duplicate';
+            document.getElementById('moduleResult').className = modulePass ? 'result-pass' : 'result-fail';
+        } catch (error) {
+            console.error('Error checking module claim:', error);
+        }
+    }
+
+    function showRejectModal(claimId) {
+        // Store the claim ID for later use
+        document.getElementById('rejectModal').setAttribute('data-claim-id', claimId);
+        
+        // Reset the form
+        document.getElementById('rejectReason').value = '';
+        document.getElementById('otherReason').value = '';
+        document.getElementById('otherReasonDiv').style.display = 'none';
+        
+        // Show the modal
+        var modal = new bootstrap.Modal(document.getElementById('rejectModal'));
+        modal.show();
+    }
+
+    function showApproveModal(claimId) {
+        // Store the claim ID for later use
+        document.getElementById('approveModal').setAttribute('data-claim-id', claimId);
+        
+        // Reset the form
+        document.getElementById('approveReason').value = '';
+        
+        // Show the modal
+        var modal = new bootstrap.Modal(document.getElementById('approveModal'));
+        modal.show();
+    }
+
+    // Add event listener for the reason dropdown
+    document.getElementById('rejectReason').addEventListener('change', function() {
+        const otherReasonDiv = document.getElementById('otherReasonDiv');
+        otherReasonDiv.style.display = this.value === 'other' ? 'block' : 'none';
+    });
+
+    // Add event listener for the confirm reject button
+    document.getElementById('confirmReject').addEventListener('click', function() {
+        const modal = document.getElementById('rejectModal');
+        const claimId = modal.getAttribute('data-claim-id');
+        const reasonSelect = document.getElementById('rejectReason');
+        const otherReasonText = document.getElementById('otherReason');
+        
+        let finalReason = reasonSelect.value;
+        if (finalReason === 'other') {
+            finalReason = otherReasonText.value;
+        }
+        
+        if (!finalReason) {
+            alert('Please select a reason for rejection');
+            return;
+        }
+        
+        // Call the reject function with the selected reason
+        rejectClaim(claimId, finalReason);
+        
+        // Close the modal
+        bootstrap.Modal.getInstance(modal).hide();
+    });
+
+    // Add event listener for the confirm approve button
+    document.getElementById('confirmApprove').addEventListener('click', function() {
+        const modal = document.getElementById('approveModal');
+        const claimId = modal.getAttribute('data-claim-id');
+        const reason = document.getElementById('approveReason').value;
+        
+        // Call the approve function with the optional reason
+        approveClaim(claimId, reason);
+        
+        // Close the modal
+        bootstrap.Modal.getInstance(modal).hide();
+    });
+
+    function approveClaim(claimId, reason) {
+        var form = document.createElement("form");
+        form.method = "POST";
+        form.action = "?handler=Approve";
+
+        var claimIdInput = document.createElement("input");
+        claimIdInput.type = "hidden";
+        claimIdInput.name = "claimId";
+        claimIdInput.value = claimId;
+        form.appendChild(claimIdInput);
+
+        var reasonInput = document.createElement("input");
+        reasonInput.type = "hidden";
+        reasonInput.name = "reason";
+        reasonInput.value = reason || '';
+        form.appendChild(reasonInput);
+
+        // Add anti-forgery token
+        var antiForgeryToken = document.querySelector("input[name='__RequestVerificationToken']").value;
+        var tokenInput = document.createElement("input");
+        tokenInput.type = "hidden";
+        tokenInput.name = "__RequestVerificationToken";
+        tokenInput.value = antiForgeryToken;
+        form.appendChild(tokenInput);
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    function rejectClaim(claimId, reason) {
+        var form = document.createElement("form");
+        form.method = "POST";
+        form.action = "?handler=Reject";
+
+        var claimIdInput = document.createElement("input");
+        claimIdInput.type = "hidden";
+        claimIdInput.name = "claimId";
+        claimIdInput.value = claimId;
+        form.appendChild(claimIdInput);
+
+        var reasonInput = document.createElement("input");
+        reasonInput.type = "hidden";
+        reasonInput.name = "reason";
+        reasonInput.value = reason;
+        form.appendChild(reasonInput);
+
+        // Add anti-forgery token
+        var antiForgeryToken = document.querySelector("input[name='__RequestVerificationToken']").value;
+        var tokenInput = document.createElement("input");
+        tokenInput.type = "hidden";
+        tokenInput.name = "__RequestVerificationToken";
+        tokenInput.value = antiForgeryToken;
+        form.appendChild(tokenInput);
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    function viewDetails(claimId) {
+        window.location.href = '/ClaimDetails/' + claimId;
+    }
+</script> <!--(Khalidabuhakmeh, 2023)-->

@@ -1,0 +1,198 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.HRManagementModel
+@{
+    ViewData["Title"] = "HR Management";
+}
+<div class="container mt-4">
+    <!-- Logo and Title -->
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="css/images/EMPLOYEEPICTURES.jpg" alt="Logo" style="height: 96px; width: 96px;" />
+        </div>
+        <div class="col">
+            <h1 class="fw-bold">CMCS</h1>
+        </div>
+        <div class="col-auto">
+            <a class="btn btn-primary me-2" href="/Notifications">Notifications</a>
+            <a class="btn btn-danger" href="/Login">Logout</a>
+        </div>
+    </div>
+<!-- (MicroSoftLearn, 2024) -->
+
+    <hr />
+    <br></br>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Total Claims</h5>
+                        <h2 class="mb-0">@Model.TotalClaims</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Total Hours</h5>
+                        <h2 class="mb-0">@Model.TotalHours.ToString("N2")</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Total Amount</h5>
+                        <h2 class="mb-0">@Model.TotalAmount.ToString("N2")</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <hr />
+    <br></br>
+
+    <h2>Approved Claims</h2>
+
+    <div class="mb-4">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reportModal">
+            Generate Report Payment Processing
+        </button>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Lecturer Name</th>
+                <th>Hours Worked</th>
+                <th>Hourly Rate</th>
+                <th>Month</th>
+                <th>Module</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model.Claims)
+            {
+                <tr>
+                    <td>@claim.Lecturer.fullName</td>
+                    <td>@claim.HoursWorked</td>
+                    <td>@claim.HourlyRate.ToString("N2")</td>
+                    <td>@claim.Month</td>
+                    <td>@claim.Module</td>
+                    <td>@claim.Total.ToString("N2")</td>
+                    <td>
+                        @if (claim.Document != null)
+                        {
+                            <a href="/Claims/ViewDocument/@claim.ClaimId" class="btn btn-sm btn-info">View Document</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <hr />
+    <br></br>
+    <h2>Add New Lecturer</h2>
+    <form method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="NewLecturer.username" class="form-label">Username</label>
+                    <input asp-for="NewLecturer.username" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NewLecturer.password" class="form-label">Password</label>
+                    <input asp-for="NewLecturer.password" type="password" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NewLecturer.fullName" class="form-label">Full Name</label>
+                    <input asp-for="NewLecturer.fullName" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NewLecturer.Course" class="form-label">Course</label>
+                    <input asp-for="NewLecturer.Course" class="form-control" required />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label asp-for="NewLecturer.Email" class="form-label">Email</label>
+                    <input asp-for="NewLecturer.Email" type="email" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NewLecturer.PhoneNumber" class="form-label">Phone Number</label>
+                    <input asp-for="NewLecturer.PhoneNumber" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NewLecturer.Address" class="form-label">Address</label>
+                    <input asp-for="NewLecturer.Address" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NewLecturer.HireDate" class="form-label">Hire Date</label>
+                    <input asp-for="NewLecturer.HireDate" type="date" class="form-control" required />
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Lecturer</button>
+    </form>
+    <hr />
+    <br></br>
+    <h2>Existing Lecturers</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Course</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Hire Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var lecturer in Model.Lecturers)
+            {
+                <tr>
+                    <td>@lecturer.fullName</td>
+                    <td>@lecturer.Course</td>
+                    <td>@lecturer.Email</td>
+                    <td>@lecturer.PhoneNumber</td>
+                    <td>@lecturer.HireDate.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+   
+</div>
+
+<!-- Report Generation Modal -->
+<div class="modal fade" id="reportModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Generate Payment Report</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="post" asp-page-handler="GenerateReport">  <!-- (LearnRazorPages,[s.a]) -->
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Start Date</label>
+                        <input type="date" class="form-control" name="StartDate" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">End Date</label>
+                        <input type="date" class="form-control" name="EndDate" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Generate Report</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- (Dev.to, 2023) -->
+

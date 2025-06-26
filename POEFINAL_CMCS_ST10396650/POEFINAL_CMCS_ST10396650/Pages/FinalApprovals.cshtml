@@ -1,0 +1,122 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.FinalApprovalsModel
+@{
+    ViewData["Title"] = "Final Approvals";
+}
+
+<div class="container mt-4">
+    <div class="col-auto">
+        <img src="css/images/EMPLOYEEPICTURES.jpg" alt="Logo" style="height: 96px; width: 96px;" />
+    </div>
+    <div class="col">
+        <h1 class="fw-bold">CMCS</h1>
+    </div>
+    <div class="col-auto">
+        <a class="btn btn-primary me-2" href="/Notifications">Notifications</a>
+        <a class="btn btn-danger" href="/Login">Logout</a>
+    </div>
+
+
+<hr />
+<br></br>
+    <h3>Final Approvals</h3>
+
+    @if (Model.FinalApprovedClaims != null && Model.FinalApprovedClaims.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Lecturer</th>
+                    <th>Status Approval</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var claim in Model.FinalApprovedClaims)
+                {
+                    <tr>
+                        <td>@claim.ClaimId</td>
+                        <td>@claim.Lecturer.fullName</td>
+                        <td>@claim.StatusApproval</td>
+                        <td>
+                            <button class="btn btn-success btn-sm me-2" onclick="showApproveModal(@claim.ClaimId)">Approve</button>
+                            <button class="btn btn-danger btn-sm me-2" onclick="showRejectModal(@claim.ClaimId)">Reject</button>
+                            <button class="btn btn-info btn-sm view-details" onclick="toggleClaimDetails(@claim.ClaimId)">
+                                View Details
+                            </button>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            No approved claims found.
+        </div>
+    }
+
+    <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rejectModalLabel">Reject Claim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="rejectReason" class="form-label">Select Rejection Reason:</label>
+                        <select class="form-select" id="rejectReason">
+                            <option value="">Choose a reason...</option>
+                            <option value="Late claim submission">Late claim submission</option>
+                            <option value="Invalid hours">Invalid hours</option>
+                            <option value="Incorrect supporting documents">Incorrect supporting documents</option>
+                            <option value="Invalid module">Invalid module</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="otherReasonDiv" style="display: none;">
+                        <label for="otherReason" class="form-label">Specify Other Reason:</label>
+                        <textarea class="form-control" id="otherReason" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmReject">Confirm Rejection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Approve Modal -->
+    <div class="modal fade" id="approveModal" tabindex="-1" aria-labelledby="approveModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="approveModalLabel">Approve Claim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="approveReason" class="form-label">Additional Comments (Optional):</label>
+                        <textarea class="form-control" id="approveReason" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" id="confirmApprove">Confirm Approval</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3">
+        <a href="javascript:history.back()" class="btn btn-primary">Back</a>
+    </div>
+</div>
+
+
+
+    

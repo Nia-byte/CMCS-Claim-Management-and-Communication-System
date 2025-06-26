@@ -1,0 +1,298 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.PCoordinatorModel
+@{
+    ViewData["Title"] = "PCoordinator";
+}
+
+<div class="container mt-4">
+    <!-- Top Section -->
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="/css/images/EMPLOYEEPICTURES.jpg" alt="Logo" style="height: 96px; width: 96px;" />
+        </div>
+        <div class="col">
+            <h1 class="fw-bold">CMCS</h1>
+            <p>Welcome Back</p>
+        </div>
+        <div class="col-auto">
+            <a asp-page="/Notifications" class="btn btn-primary me-2">Notifications</a>
+            <a asp-page="/Login" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="col-md-9">
+        <a asp-page="/PendingClaims" class="btn btn-primary-custom mb-3">View Pending Claims</a> <!--(LearnRazorPages,[s.a])-->
+    </div>
+
+    <h3>Final Approvals</h3>
+
+    @if (Model.FinalApprovedClaims != null && Model.FinalApprovedClaims.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Lecturer</th>
+                    <th>Status Approval</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var claim in Model.FinalApprovedClaims) <!--(LearnRazorPages,[s.a])-->
+                {
+                    <tr>
+                        <td>@claim.ClaimId</td>
+                        <td>@claim.Lecturer.fullName</td>
+                        <td>@claim.StatusApproval</td>
+                        <td>
+                            <button class="btn btn-success btn-sm me-2" onclick="showApproveModal(@claim.ClaimId)">Approve</button>
+                            <button class="btn btn-danger btn-sm me-2" onclick="showRejectModal(@claim.ClaimId)">Reject</button>
+                            <button class="btn btn-info btn-sm view-details" onclick="toggleClaimDetails(@claim.ClaimId)">
+                                View Details
+                            </button>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            No approved claims found.
+        </div>
+    }
+
+    <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rejectModalLabel">Reject Claim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="rejectReason" class="form-label">Select Rejection Reason:</label>
+                        <select class="form-select" id="rejectReason">
+                            <option value="">Choose a reason...</option>
+                            <option value="Late claim submission">Late claim submission</option>
+                            <option value="Invalid hours">Invalid hours</option>
+                            <option value="Incorrect supporting documents">Incorrect supporting documents</option>
+                            <option value="Invalid module">Invalid module</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="otherReasonDiv" style="display: none;">
+                        <label for="otherReason" class="form-label">Specify Other Reason:</label>
+                        <textarea class="form-control" id="otherReason" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmReject">Confirm Rejection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Approve Modal -->
+    <div class="modal fade" id="approveModal" tabindex="-1" aria-labelledby="approveModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="approveModalLabel">Approve Claim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="approveReason" class="form-label">Additional Comments (Optional):</label>
+                        <textarea class="form-control" id="approveReason" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" id="confirmApprove">Confirm Approval</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+<!--(LearnRazorPages,[s.a])-->
+     <div class="row">
+            <div class="col-md-9">
+            
+
+                <h3>All Claims:</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Lecturer Name</th>
+                            <th>Hours Worked</th>
+                            <th>Hourly Rate</th>
+                            <th>Month</th>
+                            <th>Module</th>
+                            <th>Total</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var claim in Model.Claims)
+                        {
+                            <tr>
+                                <td>@claim.Lecturer.fullName</td>
+                                <td>@claim.HoursWorked</td>
+                                <td>@claim.HourlyRate.ToString("N2")</td>
+                                <td>@claim.Month</td>
+                                <td>@claim.Module</td>
+                                <td>@claim.Total.ToString("N2")</td>
+                            <td>
+                               
+                                <button class="btn btn-info btn-sm view-details" onclick="toggleClaimDetails(@claim.ClaimId)"> <!--(C# Corner, 2023)-->
+                                    View Details
+                                </button>
+                                </td>
+                            </tr>
+                            <tr id="details-@claim.ClaimId" class="claim-details" style="display: none;"> <!--(Khalidabuhakmeh, 2023)-->
+                                <td colspan="8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <strong>Module:</strong>
+                                                        <span>@claim.Module</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Hours Worked:</strong>
+                                                        <span>@claim.HoursWorked</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Rate:</strong>
+                                                        <span>@claim.HourlyRate.ToString("C")</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Total:</strong>
+                                                        <span>@claim.Total.ToString("C")</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <strong>Month:</strong>
+                                                        <span>@claim.Month</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Submission Date:</strong>
+                                                        <span>@claim.SubmissionDate.ToString("d")</span>
+                                                    </div>
+                                                    @if (claim.Notes != null)
+                                                    {
+                                                        <div class="mb-3">
+                                                            <strong>Notes:</strong>
+                                                            <span>@claim.Notes</span>
+                                                        </div>
+                                                    }
+                                                    @if (claim.Document != null)
+                                                    {
+                                                        <div class="mb-3">
+                                                            <strong>Document:</strong>
+                                                            <a href="#" class="btn btn-primary btn-sm" onclick="downloadDocument(@claim.ClaimId)">
+                                                                Download Document
+                                                            </a>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> <!--(LearnRazorPages,[s.a])-->
+    <script>
+        function toggleClaimDetails(claimId) {
+            const detailsRow = document.getElementById(`details-${claimId}`);
+            const allDetailsRows = document.getElementsByClassName('claim-details');
+
+            // Hide all other detail rows
+            Array.from(allDetailsRows).forEach(row => {
+                if (row.id !== `details-${claimId}`) {
+                    row.style.display = 'none';
+                }
+            });
+
+            // Toggle the clicked detail row
+            if (detailsRow) {
+                detailsRow.style.display = detailsRow.style.display === 'none' ? 'table-row' : 'none';
+            }
+        }
+        function showRejectModal(claimId) {
+            // Store the claim ID for later use
+            document.getElementById('rejectModal').setAttribute('data-claim-id', claimId); <--(Khalidabuhakmeh, 2023)-->
+
+            // Reset the form
+            document.getElementById('rejectReason').value = '';
+            document.getElementById('otherReason').value = '';
+            document.getElementById('otherReasonDiv').style.display = 'none';
+
+            // Show the modal
+            var modal = new bootstrap.Modal(document.getElementById('rejectModal'));
+            modal.show();
+        }
+
+        function showApproveModal(claimId) {
+            // Store the claim ID for later use
+            document.getElementById('approveModal').setAttribute('data-claim-id', claimId);
+
+            // Reset the form
+            document.getElementById('approveReason').value = '';
+
+            // Show the modal
+            var modal = new bootstrap.Modal(document.getElementById('approveModal'));
+            modal.show();
+        }
+
+        // Add event listener for the reason dropdown
+        document.getElementById('rejectReason').addEventListener('change', function () {
+            const otherReasonDiv = document.getElementById('otherReasonDiv');
+            otherReasonDiv.style.display = this.value === 'other' ? 'block' : 'none';
+        });
+
+        // Add event listener for the confirm reject button
+        document.getElementById('confirmReject').addEventListener('click', function () {
+            const modal = document.getElementById('rejectModal');
+            const claimId = modal.getAttribute('data-claim-id');
+            const reasonSelect = document.getElementById('rejectReason');
+            const otherReasonText = document.getElementById('otherReason');
+
+            let finalReason = reasonSelect.value;
+            if (finalReason === 'other') {
+                finalReason = otherReasonText.value; <--(Khalidabuhakmeh, 2023)-->
+            }
+
+            if (!finalReason) {
+                alert('Please select a reason for rejection');
+                return;
+            }
+
+            // Call the reject function with the selected reason
+            rejectClaim(claimId, finalReason);
+
+            // Close the modal
+            bootstrap.Modal.getInstance(modal).hide(); <--(Khalidabuhakmeh, 2023)-->
+        });
+    </script>
+
+</div>
+    

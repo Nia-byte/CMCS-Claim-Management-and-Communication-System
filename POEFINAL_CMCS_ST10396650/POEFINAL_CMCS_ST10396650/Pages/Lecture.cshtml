@@ -1,0 +1,101 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.LectureModel
+@{
+    ViewData["Title"] = "Lecturer";
+}
+
+<div class="container mt-4">
+    <!-- Top Section -->
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="css/images/EMPLOYEEPICTURES.jpg" alt="Logo" style="height: 96px; width: 96px;" />
+        </div>
+        <div class="col">
+            <h1 class="fw-bold">CMCS</h1>
+            <p>Welcome Back</p>
+        </div>
+        <div class="col-auto">
+            <a class="btn btn-primary me-2" href="/Notifications">Notifications</a>
+            <a class="btn btn-danger" href="/Logout">Logout</a>
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- Main Content -->
+    <div class="row"> <!-- (Dev.to, 2023) -->
+        <!-- Left Section -->
+        <div class="col-6">
+            <button class="btn btn-primary fw-bold mb-3" onclick="location.href='/SubmitClaim'">Submit A Claim</button>
+            <h5 class="fw-bold">Claims History:</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Claim ID</th>
+                        <th>Status</th>
+                        <th>Submission Date</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var claim in Model.ClaimsHistory)
+                    {
+                        <tr>
+                            <td>@claim.ClaimId</td>
+                            <td>@claim.Status</td>
+                            <td>@claim.SubmissionDate.ToString("yyyy-MM-dd")</td>
+                            <td>@claim.Notes</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-6"> <!-- (Dev.to, 2023) -->
+            <h5 class="fw-bold">Track Claim:</h5>
+            <form method="get" asp-page-handler="TrackClaim">  <!-- (LearnRazorPages,[s.a]) -->
+                <div class="mb-3">
+                    <input type="text" name="claimId" class="form-control" placeholder="Enter Claim ID" />
+                </div>
+                <button type="submit" class="btn btn-primary">Track Claim</button>
+            </form>
+            <div class="border mt-3 p-3" style="min-height: 80px;">
+                @if (!string.IsNullOrEmpty(Model.TrackedClaimDetails))
+                {
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-info">
+                                @foreach (var line in Model.TrackedClaimDetails.Split('\n'))
+                                {
+                                    <p class="mb-1">@line</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted text-center">Enter a Claim ID to track its details.</p>
+                }
+            </div>
+  <!-- (LearnRazorPages,[s.a]) -->
+            <h5 class="fw-bold mt-4">Monthly Analytics:</h5>
+            <div class="row">
+                <div class="col-6">
+                    <div class="border p-3 text-center">
+                        <p class="fw-bold">Total Claims:</p>
+                        <p class="text-primary fs-4">@Model.TotalClaims</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="border p-3 text-center">
+                        <p class="fw-bold">Approved Claims:</p>
+                        <p class="text-primary fs-4">@Model.ApprovedClaims</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,88 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.SubmitClaimModel
+@{
+    ViewData["Title"] = "Submit Claim";
+}
+<div class="claim-review-container">
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo-container">
+            <img src="~/css/images/EMPLOYEEPICTURES.jpg" alt="Company Logo" class="logo" />
+        </div>
+        <div class="title-container">
+            <h1 class="fw-bold">CMCS Claim Submission</h1>
+        </div>
+        <div class="actions-container">
+            <a class="btn btn-primary" asp-page="/Notifications">Notifications</a>
+            <a class="btn btn-danger" asp-page="/Index">Logout</a>
+        </div>
+    </div>
+    <hr />
+ <!-- (Khalidabuhakmeh, 2023) -->
+    <!-- Form Section -->
+    <div class="form-content">
+        <h3 class="text-center">Submit a New Claim</h3>
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Month Worked -->
+            <div class="form-group">
+                <label asp-for="Input.Month">Month Worked:</label>
+                <select asp-for="Input.Month" class="form-select" asp-items="new SelectList(Model.Months)">
+                    <option value="" disabled selected>Select a Month</option>
+                </select>
+                <span asp-validation-for="Input.Month" class="text-danger"></span>
+            </div>
+
+            <!-- Hours Worked -->
+            <div class="form-group">
+                <label asp-for="Input.HoursWorked">Hours Worked:</label>
+                <input asp-for="Input.HoursWorked" class="form-control" onchange="calculateTotal()" />
+                <span asp-validation-for="Input.HoursWorked" class="text-danger"></span>
+            </div>
+
+            <!-- Hourly Rate -->
+            <div class="form-group">
+                <label asp-for="Input.HourlyRate">Hourly Rate</label>
+                <input asp-for="Input.HourlyRate" readonly class="form-control" />
+            </div>
+
+            <!-- Total -->
+            <div class="form-group">
+                <label asp-for="Input.Total">Total:</label>
+                <input asp-for="Input.Total" class="form-control" readonly />
+            </div>
+
+            <!-- Additional Notes -->
+            <div class="form-group">
+                <label asp-for="Input.Notes">Additional Notes:</label>
+                <textarea asp-for="Input.Notes" class="form-control" rows="4"></textarea>
+            </div>
+
+            <!-- Upload Documents -->
+            <div class="form-group">
+                <label asp-for="Input.DocumentUpload">Upload Documents:</label>
+                <input asp-for="Input.DocumentUpload" type="file" class="form-control"
+                       accept=".pdf,.docx,.doc" />
+            </div>
+            <a class="btn-secondary" asp-page="/Lecture">Back</a>
+
+            <!-- Action Buttons -->
+            <div class="form-actions mt-3">
+                <button type="reset" class="btn btn-secondary">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit Claim</button>
+            </div>
+        </form>
+    </div>
+</div>
+ <!-- (MicroSoftLearn, 2024) -->
+@section Scripts {
+    <script>
+        function calculateTotal() {
+            const hours = parseFloat(document.getElementById('Input_HoursWorked').value) || 0;
+            const rate = parseFloat(document.getElementById('Input_HourlyRate').value) || 0;
+            const total = hours * rate;
+            document.getElementById('Input_Total').value = total.toFixed(2);
+        }
+    </script>
+}

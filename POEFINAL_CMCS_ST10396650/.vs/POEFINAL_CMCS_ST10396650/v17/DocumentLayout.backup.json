@@ -1,0 +1,630 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\pcoordinator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\pcoordinator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\submitclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\submitclaim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\pcoordinator.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\pcoordinator.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\pendingclaims.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\pendingclaims.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\pendingclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\manager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\manager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\manager.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\manager.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\finalapprovals.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\finalapprovals.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\finalapprovals.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\finalapprovals.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\hrmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\hrmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\hrmanagement.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\hrmanagement.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\reviewclaims.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\reviewclaims.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\reviewclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\reviewclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\claimmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\claimmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\lecture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\lecture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\reviewedclaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\reviewedclaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\lecture.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\lecture.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\lecture.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\lecture.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\claimapproval.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\claimapproval.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\programmecoordinator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\programmecoordinator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\claimapproval.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\claimapproval.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\claimhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\claimhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\pages\\submitclaim.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\pages\\submitclaim.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\academicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\academicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\iclaimverificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\iclaimverificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|c:\\users\\lab_services_student\\source\\repos\\poefinal_cmcs_st10396650\\poefinal_cmcs_st10396650\\claimverificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BCD3BA-DE8F-403D-9B7D-BEB1E36EECF7}|POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650.csproj|solutionrelative:poefinal_cmcs_st10396650\\claimverificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Login.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Login.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Login.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T09:30:39.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Login.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Login.cshtml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T09:32:52.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAQAAAAANDMzMzMrwBsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T09:32:26.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SubmitClaim.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\SubmitClaim.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\SubmitClaim.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\SubmitClaim.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\SubmitClaim.cshtml",
+              "ViewState": "AgIAAAMAAABA0MzMzIwjwA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T11:02:21.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswCsAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T15:06:45.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PCoordinator.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\PCoordinator.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\PCoordinator.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\PCoordinator.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\PCoordinator.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T15:44:59.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PendingClaims.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\PendingClaims.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\PendingClaims.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\PendingClaims.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\PendingClaims.cshtml.cs",
+              "ViewState": "AgIAAKUAAAAAzMzMzMwRwAsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:55:07.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Index.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Index.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T15:05:35.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Program.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Program.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Program.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T09:42:48.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PendingClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\PendingClaims.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\PendingClaims.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\PendingClaims.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\PendingClaims.cshtml",
+              "ViewState": "AgIAAE4BAAAAAAAAAAAUwGkBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T15:47:12.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Manager.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Manager.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Manager.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Manager.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Manager.cshtml",
+              "ViewState": "AgIAADoAAADAMzMzM/MmwAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T03:08:37.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Manager.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Manager.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Manager.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Manager.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Manager.cshtml.cs",
+              "ViewState": "AgIAAAgAAADAlJmZmRkuwBwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T03:08:43.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PCoordinator.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\PCoordinator.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\PCoordinator.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\PCoordinator.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\PCoordinator.cshtml.cs",
+              "ViewState": "AgIAAEcAAACAmZmZmZklwFoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:49:57.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FinalApprovals.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\FinalApprovals.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\FinalApprovals.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\FinalApprovals.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\FinalApprovals.cshtml.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:54:02.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FinalApprovals.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\FinalApprovals.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\FinalApprovals.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\FinalApprovals.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\FinalApprovals.cshtml",
+              "ViewState": "AgIAAFcAAABAzMzMzAwrwF0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T15:53:16.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ReviewClaims.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\ReviewClaims.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\ReviewClaims.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\ReviewClaims.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\ReviewClaims.cshtml.cs",
+              "ViewState": "AgIAAAEAAADgmJmZmVkkwBcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T03:07:15.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HRManagement.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\HRManagement.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\HRManagement.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\HRManagement.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\HRManagement.cshtml.cs",
+              "ViewState": "AgIAAA4AAAAAxszMzEwpwCUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:05:02.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HRManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\HRManagement.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\HRManagement.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\HRManagement.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\HRManagement.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwF0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T10:00:22.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ReviewClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\ReviewClaims.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\ReviewClaims.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\ReviewClaims.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\ReviewClaims.cshtml",
+              "ViewState": "AgIAAC0AAAAA28zMzMwHwEgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-22T03:06:41.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ClaimModel.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ClaimModel.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\ClaimModel.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ClaimModel.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\ClaimModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T10:15:46.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Lecture.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Lecture.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Lecture.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Lecture.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Lecture.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T09:40:08.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ReviewedClaim.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ReviewedClaim.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\ReviewedClaim.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ReviewedClaim.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\ReviewedClaim.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T23:20:29.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\appsettings.json",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\appsettings.json",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\appsettings.json",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-22T02:23:48.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAFcBAAAA/v////8KwG0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-21T10:02:25.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Lecture.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Lecture.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Lecture.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Lecture.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Lecture.cshtml.cs",
+              "ViewState": "AgIAAFEAAAAAmZmZmZkuwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T09:57:23.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Lecture.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Lecture.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Lecture.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Lecture.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Lecture.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T09:33:45.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ApplicationDbContext.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAQAAABAmZmZmRkmwBQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T09:35:19.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-22T08:25:28.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ClaimApproval.cshtml",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\ClaimApproval.cshtml",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\ClaimApproval.cshtml",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\ClaimApproval.cshtml",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\ClaimApproval.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T15:11:51.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Notification.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\Notification.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\Notification.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\Notification.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T03:11:20.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProgrammeCoordinator.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ProgrammeCoordinator.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\ProgrammeCoordinator.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ProgrammeCoordinator.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\ProgrammeCoordinator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T10:04:19.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Claim.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Claim.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Claim.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Claim.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Claim.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T00:27:23.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IClaimVerificationService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\IClaimVerificationService.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\IClaimVerificationService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\IClaimVerificationService.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\IClaimVerificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T12:10:19.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ClaimApproval.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\ClaimApproval.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\ClaimApproval.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\ClaimApproval.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\ClaimApproval.cshtml.cs",
+              "ViewState": "AgIAADcAAADgNDMzM/MkwBIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:12:22.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ClaimHistory.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ClaimHistory.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\ClaimHistory.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ClaimHistory.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\ClaimHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T10:14:19.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ClaimVerificationService.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ClaimVerificationService.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\ClaimVerificationService.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\ClaimVerificationService.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\ClaimVerificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T12:11:17.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "SubmitClaim.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\SubmitClaim.cshtml.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\Pages\\SubmitClaim.cshtml.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\Pages\\SubmitClaim.cshtml.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\Pages\\SubmitClaim.cshtml.cs",
+              "ViewState": "AgIAAE4AAADQKTMzM7MhwGEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T11:08:33.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AcademicManager.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\AcademicManager.cs",
+              "RelativeDocumentMoniker": "POEFINAL_CMCS_ST10396650\\AcademicManager.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\POEFINAL_CMCS_ST10396650\\POEFINAL_CMCS_ST10396650\\AcademicManager.cs",
+              "RelativeToolTip": "POEFINAL_CMCS_ST10396650\\AcademicManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T10:04:58.443Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

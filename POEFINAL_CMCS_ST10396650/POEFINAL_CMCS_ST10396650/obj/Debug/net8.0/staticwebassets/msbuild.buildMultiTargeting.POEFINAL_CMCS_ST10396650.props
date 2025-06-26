@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\POEFINAL_CMCS_ST10396650.props" />
+</Project>

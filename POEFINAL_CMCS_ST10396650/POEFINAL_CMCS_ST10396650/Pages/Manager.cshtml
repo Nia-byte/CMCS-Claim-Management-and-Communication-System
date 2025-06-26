@@ -1,0 +1,159 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.ManagerModel
+@{
+    ViewData["Title"] = "Manager";
+}
+
+<div class="container mt-4"> <!-- (Dev.to, 2023)-->
+    <!-- Logo and Title -->
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="css/images/EMPLOYEEPICTURES.jpg" alt="Logo" style="height: 96px; width: 96px;" />
+        </div>
+        <div class="col"> <!-- (Dev.to, 2023)-->
+            <h1 class="fw-bold">CMCS</h1>
+        </div>
+        <div class="col-auto">
+            <a class="btn btn-primary me-2" href="/Notifications">Notifications</a>
+            <a class="btn btn-danger" href="/Login">Logout</a>
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- Report Section -->
+    <div class="row text-center mb-4">
+        <div class="col">
+            <div class="border p-3">
+                <h5 class="fw-bold">Total Claims:</h5>
+                <h4>@Model.TotalClaims</h4>
+            </div>
+        </div>
+        <div class="col">
+            <div class="border p-3">
+                <h5 class="fw-bold">Total Hours:</h5>
+                <h4>@Model.TotalHours</h4>
+            </div>
+        </div>
+        <div class="col">
+            <div class="border p-3">
+                <h5 class="fw-bold">Total Amount:</h5>
+                <h4>@Model.TotalAmount.ToString("C")</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="text-center mb-4">
+        <a class="btn btn-primary fw-bold" href="/ReviewClaims">View Request Review Claims</a>
+    </div>
+<!-- (Dev.to, 2023)-->
+    <!-- Claims Table -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="approvedClaimsTable">
+                    <thead>
+                        <tr>
+                            <th>Claim ID</th>
+                            <th>Module</th>
+                            <th>Month</th>
+                            <th>Hours</th>
+                            <th>Rate</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var claim in Model.Claims)
+                        {
+                            <tr>
+                                <td>@claim.ClaimId</td>
+                                <td>@claim.Module</td>
+                                <td>@claim.Month</td>
+                                <td>@claim.HoursWorked</td>
+                                <td>@claim.HourlyRate.ToString("C")</td>
+                                <td>@claim.Total.ToString("C")</td>
+                                <td>@claim.Status</td>
+                                <td>
+                                    <button class="btn btn-info btn-sm view-details"
+                                            onclick="toggleClaimDetails(@claim.ClaimId)">
+                                        View Details
+                                    </button>
+                                </td>
+                            </tr> <!-- (Dev.to, 2023)-->
+                            <tr id="details-@claim.ClaimId" class="claim-details" style="display: none;">
+                                <td colspan="8">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <strong>Module:</strong>
+                                                        <span>@claim.Module</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Hours Worked:</strong>
+                                                        <span>@claim.HoursWorked</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Rate:</strong>
+                                                        <span>@claim.HourlyRate.ToString("C")</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Total:</strong>
+                                                        <span>@claim.Total.ToString("C")</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <strong>Month:</strong>
+                                                        <span>@claim.Month</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Submission Date:</strong>
+                                                        <span>@claim.SubmissionDate.ToString("d")</span>
+                                                    </div>
+                                                    @if (claim.Notes != null)
+                                                    {
+                                                        <div class="mb-3">
+                                                            <strong>Notes:</strong>
+                                                            <span>@claim.Notes</span>
+                                                        </div>
+                                                    }
+                                                    @if (claim.Document != null)
+                                                    {
+                                                        <div class="mb-3"><!-- (Dev.to, 2024)-->
+                                                            <strong>Document:</strong>
+                                                            <a href="#" class="btn btn-primary btn-sm" onclick="downloadDocument(@claim.ClaimId)">
+                                                                Download Document
+                                                            </a>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts { <!-- (Dev.to, 2024)-->
+    <script>
+        function toggleClaimDetails(claimId) {
+            $('.claim-details').not(`#details-${claimId}`).hide();
+            $(`#details-${claimId}`).toggle();
+        }
+
+        function downloadDocument(claimId) {
+            window.location.href = `/Claims/DownloadDocument/${claimId}`;
+        }
+    </script>
+}

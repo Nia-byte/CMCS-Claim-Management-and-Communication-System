@@ -1,0 +1,10 @@
+﻿**Monthly Payment Report**
+**Generated Date:** 22 November 2024
+**Report Period:** 01 November 2024 - 30 November 2024
+
+
+
+**Summary**
+**Total Claims Processed:** 0
+**Total Hours Worked:** 0,00
+**Total Amount:** R0,00

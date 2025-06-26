@@ -1,0 +1,236 @@
+﻿@page
+@model POEFINAL_CMCS_ST10396650.Pages.ReviewClaimsModel
+@{
+    ViewData["Title"] = "Review Claims";
+}
+<div class="container mt-4">
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+<!--(LearnRazorPages,[s.a])-->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Claims Waiting for Approval</h2>
+        <button class="btn btn-secondary" id="backButton" onclick="location.href='/Manager'">
+            Back to Manager Page
+        </button>
+    </div>
+
+    <div class="row"> <!--(LearnRazorPages,[s.a])-->
+        <div class="col-md-8">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="claimsTable">
+                    <thead>
+                        <tr>
+                            <th>Claim ID</th>
+                            <th>Lecturer</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var claim in Model.PendingClaims)
+                        {
+                            <tr>
+                                <td>@claim.ClaimId</td>
+                                <td>@claim.Lecturer.fullName</td>
+                                <td>@claim.StatusApproval</td>
+                                <td>
+                                    <button class="btn btn-info btn-sm view-details mb-2"
+                                            onclick="toggleClaimDetails(@claim.ClaimId)">
+                                        View Details
+                                    </button>
+                                    <button type="button" class="btn btn-warning btn-sm mb-2"
+                                            onclick="showPolicyCheck(@claim.ClaimId, @claim.Claim.HoursWorked, @claim.Claim.HourlyRate, @claim.Claim.Total, '@claim.Claim.Module', '@claim.Claim.Month')"
+                                            data-bs-toggle="modal" data-bs-target="#policyCheckModal">
+                                        Policy Check
+                                    </button>
+                                    <div class="btn-group d-block">
+                                        <form method="post" class="d-inline">
+                                            <input type="hidden" name="claimId" value="@claim.ClaimId" />
+                                            <button type="submit"
+                                                    asp-page-handler="Approve"
+                                                    class="btn btn-success btn-sm">
+                                                Approve
+                                            </button>
+                                        </form>
+                                        <form method="post" class="d-inline">
+                                            <input type="hidden" name="claimId" value="@claim.ClaimId" />
+                                            <button type="submit"
+                                                    asp-page-handler="Reject"
+                                                    class="btn btn-danger btn-sm">
+                                                Reject
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="details-@claim.ClaimId" class="claim-details" style="display: none;">
+                                <td colspan="4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <strong>Module:</strong>
+                                                        <span>@claim.Claim.Module</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Hours Worked:</strong>
+                                                        <span>@claim.Claim.HoursWorked</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Rate:</strong>
+                                                        <span>@claim.Claim.HourlyRate.ToString("C")</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Total:</strong>
+                                                        <span>@claim.Claim.Total.ToString("C")</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <strong>Month:</strong>
+                                                        <span>@claim.Claim.Month</span>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Document:</strong>
+                                                        <a href="@claim.Claim.Document" target="_blank" class="btn btn-primary btn-sm">
+                                                            View Document
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <strong>Status:</strong>
+                                                        <span>@claim.Status</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Policy Check Modal --> <!--(Khalidabuhakmeh, 2023)-->
+    <div class="modal fade" id="policyCheckModal" tabindex="-1" aria-labelledby="policyCheckModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="policyCheckModalLabel">Policy Compliance Check</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="policy-checks">
+                        <div class="policy-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <span id="hoursCheck" class="policy-icon me-2">⏳</span>
+                                <span>Weekly Hours (Max 48 hours)</span>
+                                <span id="hoursResult" class="ms-auto"></span>
+                            </div>
+                        </div>
+                        <div class="policy-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <span id="amountCheck" class="policy-icon me-2">💰</span>
+                                <span>Claim Amount (Max R50,000)</span>
+                                <span id="amountResult" class="ms-auto"></span>
+                            </div>
+                        </div>
+                        <div class="policy-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <span id="rateCheck" class="policy-icon me-2">⚖️</span>
+                                <span>Hourly Rate (R50 - R300)</span>
+                                <span id="rateResult" class="ms-auto"></span>
+                            </div>
+                        </div>
+                        <div class="policy-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <span id="moduleCheck" class="policy-icon me-2">📚</span>
+                                <span>One Claim Per Module Per Month</span>
+                                <span id="moduleResult" class="ms-auto"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+@section Scripts { <!--(Khalidabuhakmeh, 2023)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleClaimDetails(claimId) {
+            $('.claim-details').not(`#details-${claimId}`).hide();
+            $(`#details-${claimId}`).toggle();
+        }
+
+        function showPolicyCheck(claimId, hours, rate, total, module, month) {
+            // Check weekly hours
+            const hoursPass = hours <= 48;
+            document.getElementById('hoursCheck').innerHTML = hoursPass ? '✅' : '❌';
+            document.getElementById('hoursResult').innerHTML = `${hours} hours`;
+            document.getElementById('hoursResult').className = hoursPass ? 'result-pass' : 'result-fail';
+
+            // Check claim amount
+            const amountPass = total <= 50000;
+            document.getElementById('amountCheck').innerHTML = amountPass ? '✅' : '❌';
+            document.getElementById('amountResult').innerHTML = `R${total}`;
+            document.getElementById('amountResult').className = amountPass ? 'result-pass' : 'result-fail';
+
+            // Check hourly rate
+            const ratePass = rate >= 50 && rate <= 300;
+            document.getElementById('rateCheck').innerHTML = ratePass ? '✅' : '❌';
+            document.getElementById('rateResult').innerHTML = `R${rate}/hr`;
+            document.getElementById('rateResult').className = ratePass ? 'result-pass' : 'result-fail';
+
+            // Check module/month claim
+            checkModuleClaim(claimId, module, month);
+        }
+
+        async function checkModuleClaim(claimId, module, month) {
+            try {
+                const response = await fetch(`?handler=CheckModuleClaim&claimId=${claimId}&module=${module}&month=${month}`);
+                const data = await response.json();
+                const modulePass = data.isValid;
+
+                document.getElementById('moduleCheck').innerHTML = modulePass ? '✅' : '❌';
+                document.getElementById('moduleResult').innerHTML = modulePass ? 'Valid' : 'Duplicate';
+                document.getElementById('moduleResult').className = modulePass ? 'result-pass' : 'result-fail';
+            } catch (error) {
+                console.error('Error checking module claim:', error);
+            }
+        }
+
+        // Confirmation before submit
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function (e) {
+                const isApprove = this.querySelector('button[asp-page-handler="Approve"]');
+                const message = isApprove ?
+                    'Are you sure you want to approve this claim?' :
+                    'Are you sure you want to reject this claim?';
+
+                if (!confirm(message)) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+}
+<!--(Khalidabuhakmeh, 2023)-->
