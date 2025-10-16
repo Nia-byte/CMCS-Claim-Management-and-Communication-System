@@ -17,12 +17,10 @@ A Claim Management and Communication System (CMCS) developed for academic instit
 - [Database Setup](#database-setup)
 - [Building and Running](#building-and-running)
 - [User Roles](#user-roles)
-- [System Features by Role](#system-features-by-role)
-- [Data Models](#data-models)
-- [Screenshots](#screenshots)
+- [Workflows by Role](#Workflows-by-role)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 
 ## 🎯 Overview
 
